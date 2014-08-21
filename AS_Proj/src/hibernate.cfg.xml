@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="foo">
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="connection.url">jdbc:mysql://localhost:3306/hosp</property>
+  <property name="connection.username">root</property>
+  <property name="connection.password">toor</property>
+  <property name="connection.pool_size">2</property>
+  <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+  <property name="current_session_context_class">thread</property>
+  <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+  <property name="show_sql">true</property>
+  <mapping class="as.domini.Sanitari"/>
+  <mapping class="as.domini.Especialitat"/>
+  <mapping class="as.domini.Ingres"/>
+  <mapping class="as.domini.Hospital"/>
+  <mapping class="as.domini.Habitacio"/>
+  <mapping class="as.domini.Persona"/>
+  <mapping class="as.domini.Metge"/>
+  <mapping class="as.domini.Pacient"/>
+  <mapping class="as.domini.Infermera"/>
+ </session-factory>
+</hibernate-configuration>
